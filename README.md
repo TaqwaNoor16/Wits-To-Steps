@@ -4,7 +4,8 @@
 
 Hit notes to the beat, build your combo, earn points, and outperform your opponent before the music ends.
 
-![Wits to Steps](thumbnail.jpg)
+![Wits to Steps](Wits%20To%20Steps%20thumbnail.png)
+
 
 ## 🎮 Play the Game
 
