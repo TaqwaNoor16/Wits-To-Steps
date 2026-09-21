@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dawyuht1tldto"]
+
+[ext_resource type="Script" uid="uid://co8q521x06oaa" path="res://scripts/note.gd" id="1_bmf5a"]
+
+[node name="Note" type="Control" unique_id=2145292515]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -7.0
+offset_right = -1126.0
+offset_bottom = -597.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bmf5a")
+
+[node name="Visual" type="ColorRect" parent="." unique_id=1370575828]
+layout_mode = 1
+offset_left = 1.95
+offset_top = 1.0
+offset_right = 25.95
+offset_bottom = 57.0

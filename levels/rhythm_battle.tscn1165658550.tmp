@@ -1,0 +1,432 @@
+[gd_scene format=3 uid="uid://ct676bey54juf"]
+
+[ext_resource type="Script" uid="uid://cfok6th48owog" path="res://scripts/rhythm_battle.gd" id="1_7ay50"]
+[ext_resource type="Script" uid="uid://c3wj3fi8jlqto" path="res://scripts/note_spawner.gd" id="1_sny8s"]
+[ext_resource type="Script" uid="uid://d2k30kwdkkqko" path="res://scripts/disco_tiles.gd" id="2_wvyik"]
+[ext_resource type="Script" uid="uid://bxm7t4e5h3cry" path="res://scripts/heel.gd" id="3_0usv6"]
+[ext_resource type="FontFile" uid="uid://dh4b1xnmclo8o" path="res://fonts/Kaijuz.otf" id="3_8gtqv"]
+[ext_resource type="Script" uid="uid://ejohnt8hf8v6" path="res://scripts/led_lights.gd" id="3_g1b8i"]
+[ext_resource type="PackedScene" uid="uid://b804m1pfg04he" path="res://levels/heel.tscn" id="3_v80nu"]
+[ext_resource type="Script" uid="uid://cxvpf7vdbuon8" path="res://scripts/floor_lights.gd" id="4_0ex5o"]
+[ext_resource type="FontFile" uid="uid://dtoctryg8rg2c" path="res://fonts/TELONE-Regpersonal.otf" id="4_uow4t"]
+[ext_resource type="PackedScene" uid="uid://boe5krjkop4t4" path="res://levels/sneakers.tscn" id="5_fg18g"]
+[ext_resource type="FontFile" uid="uid://dam3o8rjg7ift" path="res://fonts/Gasted-Thinpersonal.otf" id="5_v80nu"]
+
+[sub_resource type="Environment" id="Environment_7ay50"]
+background_mode = 1
+background_color = Color(0.019607844, 0.019607844, 0.03137255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.14854899, 0.070449315, 0.47604203, 1)
+ambient_light_energy = 0.1
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+volumetric_fog_albedo = Color(0.08627451, 0.08627451, 0.14509805, 1)
+volumetric_fog_length = 20.0
+volumetric_fog_ambient_inject = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_qj87y"]
+size = Vector3(12, 0.2, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rc38p"]
+shading_mode = 0
+albedo_color = Color(0.40547645, 0.34747785, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vpfgi"]
+
+[sub_resource type="Animation" id="Animation_v80nu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heels:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.1451712, 0.018900037, -0.34243023)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heels:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0usv6"]
+resource_name = "dance"
+length = 7.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heels:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.51, 1.61, 1.99, 2.2, 2.24, 2.25, 2.43, 4.36),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.1451712, 0.018900037, -0.34243023), Vector3(-3.084, 0.068, -0.34), Vector3(-3.208, 0.11, -0.355), Vector3(-3.2120156, 0.3381548, -0.36027205), Vector3(-3.192, 0.396, -0.362), Vector3(-3.185, 0.069, -0.362), Vector3(-3.183, 0.189, -0.362), Vector3(-3.13, 0.189, -0.362), Vector3(-3.13, 0.374, -0.377)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heels:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.6, 1.98, 2.43, 2.75, 3.04, 3.52, 4.01, 4.36, 4.77, 4.94, 5.382672, 5.5900006, 5.9900007, 6.6800003, 7.1900005),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.41015238, 0, 0), Vector3(-0.41015238, -0.51487213, 0), Vector3(-0.41015238, -0.51487213, 0.40840703), Vector3(-0.41015238, 0.20594884, 0.51138145), Vector3(-0.41015238, 0.20594884, -0.101229094), Vector3(0.20769419, 0.20594884, -0.101229094), Vector3(0.20769419, 1.3386675, -0.101229094), Vector3(0.20769419, 1.3386675, -0.50963616), Vector3(0.20769419, 0.51487213, -0.71383965), Vector3(0.23212878, 0.10297442, -0.101229094), Vector3(-0.38571778, 0.10297442, -0.101229094), Vector3(0.3351032, 0.10297442, -0.101229094), Vector3(-0.46949357, -0.0034906585, -0.09773844), Vector3(0.28448868, 0.17976892, -0.08552113), Vector3(-0.59166664, 0.22165681, -0.05235988), Vector3(0.08726646, 0.1308997, -0.02443461)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fg18g"]
+_data = {
+&"RESET": SubResource("Animation_v80nu"),
+&"dance": SubResource("Animation_0usv6")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68jh5"]
+bg_color = Color(0.09125901, 8.230359e-06, 0.4125815, 1)
+border_width_left = 8
+border_width_top = 9
+border_width_right = 8
+border_width_bottom = 9
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uenab"]
+bg_color = Color(0.91040605, 0, 0.29304066, 1)
+border_width_left = 8
+border_width_top = 9
+border_width_right = 8
+border_width_bottom = 9
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0usv6"]
+bg_color = Color(0.09125901, 8.230359e-06, 0.4125815, 1)
+border_width_left = 8
+border_width_top = 9
+border_width_right = 8
+border_width_bottom = 9
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg18g"]
+bg_color = Color(0.91040605, 0, 0.29304066, 1)
+border_width_left = 8
+border_width_top = 9
+border_width_right = 8
+border_width_bottom = 9
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="BoxMesh" id="BoxMesh_g1b8i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ex5o"]
+shading_mode = 0
+albedo_color = Color(0.8212455, 0.000698666, 0.8510611, 1)
+
+[node name="RhythmBattle" type="Node3D" unique_id=1276299253]
+script = ExtResource("1_7ay50")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1469372342]
+transform = Transform3D(1, 0, 0, 0, 0.96987194, 0.243615, 0, -0.243615, 0.96987194, -0.23, 3.8, 7.725)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=619896214]
+light_energy = 0.05
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=150297860]
+environment = SubResource("Environment_7ay50")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1715993994]
+mesh = SubResource("BoxMesh_qj87y")
+
+[node name="DiscoTiles" type="Node3D" parent="Floor" unique_id=387220169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3614955, 0)
+script = ExtResource("2_wvyik")
+rows = 8
+columns = 9
+gap = 0.05
+
+[node name="Tile" type="MeshInstance3D" parent="Floor/DiscoTiles" unique_id=1308366027]
+transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, -0.117028475, 0)
+material_override = SubResource("StandardMaterial3D_rc38p")
+mesh = SubResource("BoxMesh_vpfgi")
+
+[node name="Heel" type="Node3D" parent="." unique_id=454842959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175, 1, 0)
+script = ExtResource("3_0usv6")
+
+[node name="Heels" parent="Heel" unique_id=967236085 instance=ExtResource("3_v80nu")]
+transform = Transform3D(0.39500007, 0, 0, 0, 0.39500004, 0, 0, 0, 0.39499998, -3.1451712, 0.018900037, -0.34243023)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heel/Heels" unique_id=568565683]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_fg18g")
+
+[node name="Sneaker" type="Node3D" parent="." unique_id=1221592106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, 1, 0)
+
+[node name="Sneakers" parent="Sneaker" unique_id=1992231391 instance=ExtResource("5_fg18g")]
+transform = Transform3D(-1.7265998e-08, 0, 0.395, 0, 0.395, 0, -0.395, 0, -1.7265998e-08, 3.4371207, 0.18953001, 0)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1105767416]
+
+[node name="RhythmUI" type="Control" parent="UI" unique_id=2058069173]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WinText" type="Label" parent="UI/RhythmUI" unique_id=852239149]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 246.0
+offset_right = 931.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(1, 0.63529414, 0.8039216, 1)
+theme_override_colors/font_shadow_color = Color(0.5731641, 1.0540634e-05, 0.40118283, 1)
+theme_override_colors/font_outline_color = Color(0.7472188, 0.74877226, 0.5563549, 1)
+theme_override_constants/line_spacing = -12
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/shadow_outline_size = 11
+theme_override_fonts/font = ExtResource("3_8gtqv")
+theme_override_font_sizes/font_size = 107
+text = "HEEL WINS!"
+
+[node name="HeelBar" type="ProgressBar" parent="UI/RhythmUI" unique_id=1586644778]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 47.0
+offset_right = 261.0
+offset_bottom = 90.0
+theme_override_styles/background = SubResource("StyleBoxFlat_68jh5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uenab")
+max_value = 200.0
+show_percentage = false
+
+[node name="SneakerBar" type="ProgressBar" parent="UI/RhythmUI" unique_id=1101200368]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 47.0
+offset_right = 1141.0
+offset_bottom = 90.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0usv6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fg18g")
+max_value = 200.0
+show_percentage = false
+
+[node name="HeelLabel" type="Label" parent="UI/RhythmUI" unique_id=1068019129]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 8.0
+offset_right = 238.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.9882353, 0.63529414, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.5254902, 0.12156863, 0.02745098, 1)
+theme_override_colors/font_outline_color = Color(0.028980296, 1.992914e-08, 0.010457335, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_fonts/font = ExtResource("4_uow4t")
+theme_override_font_sizes/font_size = 41
+text = "HEEL"
+
+[node name="SneakerLabel" type="Label" parent="UI/RhythmUI" unique_id=95660847]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 8.0
+offset_right = 1128.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.9882353, 0.63529414, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.5254902, 0.12156863, 0.02745098, 1)
+theme_override_colors/font_outline_color = Color(0.028980296, 1.992914e-08, 0.010457335, 1)
+theme_override_fonts/font = ExtResource("4_uow4t")
+theme_override_font_sizes/font_size = 41
+text = "SNEAKER"
+
+[node name="HitText" type="Label" parent="UI/RhythmUI" unique_id=1203173283]
+layout_mode = 0
+offset_left = 472.0
+offset_top = -6.0
+offset_right = 682.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.82703793, 0.9997632, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.6117647, 0.45882353, 0, 1)
+theme_override_colors/font_outline_color = Color(0.1266079, 0.060571097, 0.0040110364, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_fonts/font = ExtResource("5_v80nu")
+theme_override_font_sizes/font_size = 51
+text = "PERFECT!"
+
+[node name="NoteSpawner" type="Node" parent="UI/RhythmUI" unique_id=1942672052]
+script = ExtResource("1_sny8s")
+
+[node name="Lines" type="Node2D" parent="UI/RhythmUI" unique_id=1796428967]
+position = Vector2(63, 10)
+
+[node name="LaneLeft" type="ColorRect" parent="UI/RhythmUI/Lines" unique_id=1945624889]
+offset_left = 300.0
+offset_top = 30.0
+offset_right = 329.0
+offset_bottom = 572.0
+offset_transform_enabled = true
+color = Color(0, 0.91764706, 1, 0.14509805)
+
+[node name="LaneMiddle" type="ColorRect" parent="UI/RhythmUI/Lines" unique_id=1136840669]
+offset_left = 500.0
+offset_top = 30.0
+offset_right = 529.0
+offset_bottom = 572.0
+offset_transform_enabled = true
+color = Color(0, 0.91764706, 1, 0.14509805)
+
+[node name="LaneRight" type="ColorRect" parent="UI/RhythmUI/Lines" unique_id=752190388]
+offset_left = 700.0
+offset_top = 30.0
+offset_right = 729.0
+offset_bottom = 572.0
+offset_transform_enabled = true
+color = Color(0, 0.91764706, 1, 0.14509805)
+
+[node name="HitLine" type="ColorRect" parent="UI/RhythmUI/Lines" unique_id=772038980]
+offset_left = 787.0
+offset_top = 584.0
+offset_right = 816.0
+offset_bottom = 1126.0
+rotation = 1.5707964
+offset_transform_enabled = true
+color = Color(0, 0.91764706, 1, 0.14509805)
+
+[node name="LeftKey" type="Label" parent="UI/RhythmUI/Lines" unique_id=1794024750]
+offset_left = 299.0
+offset_top = 580.0
+offset_right = 365.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(0.8902605, 0.9999761, 0.9999996, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_uow4t")
+theme_override_font_sizes/font_size = 40
+text = "A"
+
+[node name="MiddleKey" type="Label" parent="UI/RhythmUI/Lines" unique_id=1519064501]
+offset_left = 500.0
+offset_top = 582.0
+offset_right = 566.0
+offset_bottom = 637.0
+theme_override_colors/font_color = Color(0.8902605, 0.9999761, 0.9999996, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_uow4t")
+theme_override_font_sizes/font_size = 40
+text = "S"
+
+[node name="RightKey" type="Label" parent="UI/RhythmUI/Lines" unique_id=647488866]
+offset_left = 701.0
+offset_top = 582.0
+offset_right = 767.0
+offset_bottom = 637.0
+theme_override_colors/font_color = Color(0.8902605, 0.9999761, 0.9999996, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_uow4t")
+theme_override_font_sizes/font_size = 40
+text = "D"
+
+[node name="LEDLights" type="Node3D" parent="." unique_id=420145947]
+script = ExtResource("3_g1b8i")
+
+[node name="Beam1" type="MeshInstance3D" parent="LEDLights" unique_id=1843594702]
+transform = Transform3D(0.15, 0, 0, 0, 12, 0, 0, 0, 0.15, 0, 0, 0)
+mesh = SubResource("BoxMesh_g1b8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ex5o")
+
+[node name="Beam2" type="MeshInstance3D" parent="LEDLights" unique_id=1891550124]
+transform = Transform3D(0.15, 0, 0, 0, 12, 0, 0, 0, 0.15, -4.366425, 0, -0.4623232)
+mesh = SubResource("BoxMesh_g1b8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ex5o")
+
+[node name="Beam3" type="MeshInstance3D" parent="LEDLights" unique_id=757276538]
+transform = Transform3D(0.15, 0, 0, 0, 12, 0, 0, 0, 0.15, 3.4900732, 0, 0)
+mesh = SubResource("BoxMesh_g1b8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ex5o")
+
+[node name="Beam4" type="MeshInstance3D" parent="LEDLights" unique_id=2028470306]
+transform = Transform3D(0.15, 0, 0, 0, 12, 0, 0, 0, 0.15, -1.8458023, 0, 0)
+mesh = SubResource("BoxMesh_g1b8i")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ex5o")
+
+[node name="Glow1" type="OmniLight3D" parent="LEDLights" unique_id=133396224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2905083, 0)
+light_color = Color(0.6769689, 0.00039486468, 0.6888417, 1)
+light_energy = 3.0
+light_volumetric_fog_energy = 4.0
+omni_range = 7.0
+
+[node name="Glow2" type="OmniLight3D" parent="LEDLights" unique_id=1254979912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2905083, 0)
+light_color = Color(0.6769689, 0.00039486468, 0.6888417, 1)
+light_energy = 3.0
+light_volumetric_fog_energy = 4.0
+omni_range = 7.0
+
+[node name="Glow3" type="OmniLight3D" parent="LEDLights" unique_id=554264385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2905083, 0)
+light_color = Color(0.6769689, 0.00039486468, 0.6888417, 1)
+light_energy = 3.0
+light_volumetric_fog_energy = 4.0
+omni_range = 7.0
+
+[node name="Glow4" type="OmniLight3D" parent="LEDLights" unique_id=1023274136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003953457, 4.2905083, 0)
+light_color = Color(0.6769689, 0.00039486468, 0.6888417, 1)
+light_energy = 7.0
+light_volumetric_fog_energy = 4.0
+omni_range = 7.0
+
+[node name="FloorLights" type="Node3D" parent="." unique_id=1431662589]
+script = ExtResource("4_0ex5o")
+
+[node name="FloorLight1" type="AreaLight3D" parent="FloorLights" unique_id=370309917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.661004, 0.95081234)
+light_color = Color(0.98056287, 0.83403134, 0.98548704, 1)
+light_energy = 10.748
+light_indirect_energy = 7.479
+light_volumetric_fog_energy = 7.478
+light_size = 2.875
+light_specular = 11.693
+
+[node name="FloorLight2" type="AreaLight3D" parent="FloorLights" unique_id=2044613883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.345317, 2.661004, 1.0639586)
+light_energy = 4.0
+light_size = 3.0
+
+[node name="FloorLight3" type="AreaLight3D" parent="FloorLights" unique_id=1608002449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012077332, 2.661004, 4.107146)
+light_energy = 4.0
+light_size = 3.0

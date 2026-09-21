@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://g6cy76rhqcu5"
+path="res://.godot/imported/Track 02 Laser Beam Attack.wav-0ba41901d0426a0b6d9188c3eea7f85a.sample"
+
+[deps]
+
+source_file="res://audio/Track 02 Laser Beam Attack.wav"
+dest_files=["res://.godot/imported/Track 02 Laser Beam Attack.wav-0ba41901d0426a0b6d9188c3eea7f85a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

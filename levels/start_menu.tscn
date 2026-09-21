@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://ccu3yet8y0jm2"]
+
+[ext_resource type="Script" uid="uid://tpssum157lt4" path="res://levels/start_menu.gd" id="1_btjjm"]
+[ext_resource type="FontFile" uid="uid://14l6kfhak484" path="res://fonts/Astroz Trial.ttf" id="2_eeffy"]
+[ext_resource type="Script" uid="uid://3tgmm68c2epd" path="res://scripts/background_tiles.gd" id="2_hv5yl"]
+[ext_resource type="FontFile" uid="uid://dh4b1xnmclo8o" path="res://fonts/Kaijuz.otf" id="3_hv5yl"]
+[ext_resource type="FontFile" uid="uid://dtoctryg8rg2c" path="res://fonts/TELONE-Regpersonal.otf" id="4_orc46"]
+
+[sub_resource type="Gradient" id="Gradient_8c2cb"]
+offsets = PackedFloat32Array(0, 0.20625, 1)
+colors = PackedColorArray(0.6978276, 0.4851758, 0.9912768, 1, 0.6361915, 0.228145, 1, 1, 0.8971837, 0.32741997, 0.5490365, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qj87y"]
+gradient = SubResource("Gradient_8c2cb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o4d7"]
+bg_color = Color(0.41960785, 1, 0.4627451, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.42493093, 0.42493093, 0.42493087, 1)
+shadow_size = 1
+shadow_offset = Vector2(1.53, 11.9)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttphy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.42493093, 0.42493093, 0.42493087, 1)
+shadow_size = 1
+shadow_offset = Vector2(1.53, 11.9)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0c46j"]
+bg_color = Color(0.9686267, 0.7856425, 1.1551381e-06, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.42493093, 0.42493093, 0.42493087, 1)
+shadow_size = 1
+shadow_offset = Vector2(1.53, 11.9)
+
+[node name="StartMenu" type="Control" unique_id=540677779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_btjjm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=671404978]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 684.0
+texture = SubResource("GradientTexture2D_qj87y")
+
+[node name="BackgroundTiles" type="Control" parent="." unique_id=912314937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_hv5yl")
+color_change_speed = 0.175
+fade_speed = 1.375
+
+[node name="Title" type="Label" parent="." unique_id=1905485055]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 37.0
+offset_right = 1107.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.2901961, 0, 0.3529412, 1)
+theme_override_colors/font_outline_color = Color(0.9713991, 0.8247763, 0.9542603, 1)
+theme_override_constants/shadow_offset_x = 11
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("2_eeffy")
+theme_override_font_sizes/font_size = 143
+text = "Wits To Steps"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="." unique_id=2056887102]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 214.0
+offset_right = 976.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(0.8352941, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.5568628, 0, 0.6784314, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = -5
+theme_override_fonts/font = ExtResource("3_hv5yl")
+theme_override_font_sizes/font_size = 83
+text = "A Rhythm Battle"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="." unique_id=1032124747]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 400.0
+offset_right = 763.0
+offset_bottom = 504.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.19176829, 0.09824412, 0.098041795, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5572332, 0.10222254, 0.6600486, 1)
+theme_override_fonts/font = ExtResource("4_orc46")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_4o4d7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ttphy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0c46j")
+text = "PLAY"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
