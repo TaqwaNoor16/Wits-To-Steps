@@ -40,7 +40,7 @@ Chain PERFECT hits to build your **combo** and increase your score. Missing a no
 - Winner and loser battle animations
 - Playable directly in the browser through itch.io
 
-## 📸 Gameplay
+##  Gameplay
 
 ![Wits to Steps Gameplay](gameplay.png)
 
@@ -56,7 +56,7 @@ Meanwhile, Sneaker acts as an AI-controlled opponent and builds its own battle p
 
 At the end of each battle, the scores are compared and the winner takes the dance floor!
 
-## 🛠️ Built With
+## Built With
 
 - **Godot 4**
 - **GDScript**
