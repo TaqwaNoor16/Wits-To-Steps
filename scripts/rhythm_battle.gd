@@ -161,9 +161,6 @@ func start_sneaker_after_note_offset() -> void:
 	sneaker_can_score = true
 
 
-# =========================
-# PROCESS
-# =========================
 
 func _process(delta: float) -> void:
 
